@@ -21,7 +21,7 @@ const PropertyListing = () => {
 
   useEffect(() => {
     getProperties();
-  });
+  },[]);
 
   return (
     <div className="PropertyListing">
