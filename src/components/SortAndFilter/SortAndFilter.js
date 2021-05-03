@@ -1,12 +1,12 @@
 import React from 'react';
 import './SortAndFilter.scss';
-
-const SortAndFilter = () => {
+import {priceOptions} from '../../constants'
+import Dropdown from './Dropdown'
+const SortAndFilter = ({handleChangeDropdown}) => {
     return (
         <div className="SortAndFilter">
-            {/*
-                TODO: add filters here...
-            */}
+            {/* <Dropdown options={priceOptions} label={'price'} onClick ={handleChangeDropdown}/> */}
+            <Dropdown options={priceOptions} label={'bedroom'} onClick ={(value) => handleChangeDropdown(value, 'bedroom')}/>
         </div>
     );
 };
